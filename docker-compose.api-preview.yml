@@ -1,0 +1,10 @@
+version: "3.2"
+
+services:
+  # service configuration for our dockerized Rails app
+  krakend:
+    environment:
+      VIRTUAL_HOST: api-preview.netrunnerdb.com
+      VIRTUAL_PORT: 8080
+      LETSENCRYPT_HOST: api-preview.netrunnerdb.com
+      LETSENCRYPT_EMAIL: website@nisei.net

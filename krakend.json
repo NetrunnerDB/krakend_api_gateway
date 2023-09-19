@@ -1,0 +1,2682 @@
+{
+  "version": 3,
+  "name": "NRDB v3 API",
+  "timeout": "5s",
+  "output_encoding": "json",
+  "extra_config": {
+    "security/cors": {
+      "allow_origins": [
+        "*"
+      ],
+      "expose_headers": [
+        "Content-Length",
+        "Accept-Language"
+      ],
+      "max_age": "12h",
+      "allow_methods": [
+        "GET",
+        "HEAD",
+        "POST",
+        "DELETE",
+        "PATCH"
+      ],
+      "allow_credentials": true,
+      "allow_headers": [
+        "Accept-Language"
+      ]
+    }
+  },
+  "endpoints": [
+    {
+      "endpoint": "/",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/api/docs",
+          "extra_config": {
+            "plugin/http-client": {
+              "name": "no-redirect"
+            }
+          },
+          "encoding": "no-op",
+          "sd": "static",
+          "method": "GET",
+          "disable_host_sanitize": false,
+          "host": [
+            "http://nrdb_api_server:3000"
+          ]
+        }
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/assets/apitome/{resource}",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/assets/apitome/{resource}",
+          "encoding": "no-op",
+          "sd": "static"
+        }
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/assets/apitome/highlight_themes/{theme}",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/assets/apitome/highlight_themes/{theme}",
+          "encoding": "no-op",
+          "sd": "static"
+        }
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/docs",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/docs",
+          "encoding": "no-op",
+          "sd": "static"
+        }
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/private/decks",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/decks",
+      "method": "POST",
+      "backend": [
+        {
+          "method": "POST",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/decks/{deck_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks/{deck_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/decks/{deck_id}",
+      "method": "PATCH",
+      "backend": [
+        {
+          "method": "PATCH",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks/{deck_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/decks/{deck_id}",
+      "method": "PUT",
+      "backend": [
+        {
+          "method": "PUT",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks/{deck_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/decks/{deck_id}",
+      "method": "DELETE",
+      "backend": [
+        {
+          "method": "DELETE",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/decks/{deck_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/private/user",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/user"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_cycles/{card_cycle_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/format",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/relationships/format"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/format",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/format"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_cycles",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_cycles"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/card_cycles",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/card_cycles"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/snapshots",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/relationships/snapshots"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}/snapshots",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}/snapshots"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_pools/{card_pool_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_pools/{card_pool_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}/relationships/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_set_types/{card_set_type_id}/relationships/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_set_types/{card_set_type_id}/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_set_types",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_set_types"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_set_types/{card_set_type_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/card_cycle",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/relationships/card_cycle"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/card_cycle",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/card_cycle"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/card_set_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/relationships/card_set_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/card_set_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/card_set_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_sets/{card_set_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_sets/{card_set_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes/{card_subtype_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes/{card_subtype_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_subtypes/{card_subtype_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types/{card_type_id}/relationships/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types/{card_type_id}/relationships/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types/{card_type_id}/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types/{card_type_id}/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types/{card_type_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types/{card_type_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types/{card_type_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types/{card_type_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/card_types/{card_type_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/card_types/{card_type_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/faction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/faction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/faction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/faction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/card_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/card_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/card_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/card_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/card_subtypes",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/card_subtypes"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/card_subtypes",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/card_subtypes"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/relationships/rulings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/relationships/rulings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}/rulings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}/rulings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/cards/{card_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/cards/{card_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/relationships/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/relationships/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/factions/{faction_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/factions/{faction_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/relationships/card_pools",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/relationships/card_pools"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/card_pools",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/card_pools"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/relationships/restrictions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/relationships/restrictions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/restrictions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/restrictions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/relationships/snapshots",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/relationships/snapshots"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}/snapshots",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}/snapshots"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/formats/{format_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/formats/{format_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/illustrators/{illustrator_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/illustrators/{illustrator_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/illustrators/{illustrator_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/illustrators/{illustrator_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/illustrators",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/illustrators"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/illustrators/{illustrator_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/illustrators/{illustrator_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/card"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/card",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/card"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_cycle",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/card_cycle"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/card_cycle",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/card_cycle"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_set",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/card_set"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/card_set",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/card_set"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/card_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/card_type",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/card_type"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/faction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/faction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/faction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/faction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/illustrators",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/illustrators"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/illustrators",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/illustrators"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/relationships/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/relationships/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}/side",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}/side"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/printings/{printing_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/printings/{printing_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/restrictions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/restrictions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/restrictions/{restriction_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/restrictions/{restriction_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/rulings/{ruling_id}/relationships/card",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/rulings/{ruling_id}/relationships/card"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/rulings/{ruling_id}/card",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/rulings/{ruling_id}/card"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/rulings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/rulings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/relationships/factions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/relationships/factions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/factions",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/factions"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/relationships/card_types",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/relationships/card_types"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/card_types",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/card_types"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/relationships/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/relationships/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}/printings",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}/printings"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/sides/{side_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/sides/{side_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/format",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/format"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/format",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/format"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_pool",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_pool"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_pool",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/card_pool"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/restriction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/restriction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/restriction",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/restriction"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_cycles",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_cycles"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_cycles",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/card_cycles"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_sets",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/card_sets"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/relationships/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}/cards",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}/cards"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/snapshots/{snapshot_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/snapshots/{snapshot_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    },
+    {
+      "endpoint": "/api/v3/public/validate_deck",
+      "method": "POST",
+      "backend": [
+        {
+          "method": "POST",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/validate_deck"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization"
+      ]
+    }
+  ]
+}

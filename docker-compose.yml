@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  krakend:
+    image: devopsfaith/krakend:2
+
+    volumes:
+      - ./krakend.json:/etc/krakend/krakend.json
+    networks:
+      - null_signal
+
+networks:
+  null_signal:
+    external: true
