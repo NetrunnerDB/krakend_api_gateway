@@ -341,7 +341,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/card_sets",
@@ -363,7 +364,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/cards",
@@ -385,7 +387,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/cards",
@@ -407,7 +410,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/printings",
@@ -429,7 +433,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/printings",
@@ -451,7 +456,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles",
@@ -473,7 +479,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}",
@@ -495,7 +502,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/format",
@@ -517,7 +525,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/format",
@@ -539,7 +548,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_cycles",
@@ -561,7 +571,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/card_cycles",
@@ -583,7 +594,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/card_sets",
@@ -605,7 +617,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/card_sets",
@@ -627,7 +640,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/cards",
@@ -649,7 +663,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/cards",
@@ -671,7 +686,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/relationships/snapshots",
@@ -693,7 +709,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}/snapshots",
@@ -715,7 +732,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools",
@@ -737,7 +755,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_pools/{card_pool_id}",
@@ -759,7 +778,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}/relationships/card_sets",
@@ -781,7 +801,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}/card_sets",
@@ -803,7 +824,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_set_types",
@@ -825,7 +847,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_set_types/{card_set_type_id}",
@@ -847,7 +870,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/card_cycle",
@@ -869,7 +893,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/card_cycle",
@@ -891,7 +916,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/card_set_type",
@@ -913,7 +939,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/card_set_type",
@@ -935,7 +962,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/printings",
@@ -957,7 +985,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/printings",
@@ -979,7 +1008,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/relationships/cards",
@@ -1001,7 +1031,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}/cards",
@@ -1023,7 +1054,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets",
@@ -1045,7 +1077,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_sets/{card_set_id}",
@@ -1067,7 +1100,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/cards",
@@ -1089,7 +1123,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/cards",
@@ -1111,7 +1146,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/relationships/printings",
@@ -1133,7 +1169,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}/printings",
@@ -1155,7 +1192,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes",
@@ -1177,7 +1215,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_subtypes/{card_subtype_id}",
@@ -1199,7 +1238,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types/{card_type_id}/relationships/side",
@@ -1221,7 +1261,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types/{card_type_id}/side",
@@ -1243,7 +1284,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types/{card_type_id}/relationships/cards",
@@ -1265,7 +1307,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types/{card_type_id}/cards",
@@ -1287,7 +1330,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types",
@@ -1309,7 +1353,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/card_types/{card_type_id}",
@@ -1331,7 +1376,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/side",
@@ -1353,7 +1399,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/side",
@@ -1375,7 +1422,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/faction",
@@ -1397,7 +1445,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/faction",
@@ -1419,7 +1468,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/card_type",
@@ -1441,7 +1491,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/card_type",
@@ -1463,7 +1514,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/card_subtypes",
@@ -1485,7 +1537,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/card_subtypes",
@@ -1507,7 +1560,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/printings",
@@ -1529,7 +1583,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/printings",
@@ -1551,7 +1606,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/relationships/rulings",
@@ -1573,7 +1629,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}/rulings",
@@ -1595,7 +1652,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards",
@@ -1617,7 +1675,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/cards/{card_id}",
@@ -1639,7 +1698,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/relationships/side",
@@ -1661,7 +1721,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/side",
@@ -1683,7 +1744,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/relationships/cards",
@@ -1705,7 +1767,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/cards",
@@ -1727,7 +1790,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/relationships/printings",
@@ -1749,7 +1813,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}/printings",
@@ -1771,7 +1836,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions",
@@ -1793,7 +1859,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/factions/{faction_id}",
@@ -1815,7 +1882,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/relationships/card_pools",
@@ -1837,7 +1905,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/card_pools",
@@ -1859,7 +1928,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/relationships/restrictions",
@@ -1881,7 +1951,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/restrictions",
@@ -1903,7 +1974,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/relationships/snapshots",
@@ -1925,7 +1997,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}/snapshots",
@@ -1947,7 +2020,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats",
@@ -1969,7 +2043,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/formats/{format_id}",
@@ -1991,7 +2066,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/illustrators/{illustrator_id}/relationships/printings",
@@ -2013,7 +2089,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/illustrators/{illustrator_id}/printings",
@@ -2035,7 +2112,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/illustrators",
@@ -2057,7 +2135,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/illustrators/{illustrator_id}",
@@ -2079,7 +2158,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card",
@@ -2101,7 +2181,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/card",
@@ -2123,7 +2204,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_cycle",
@@ -2145,7 +2227,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/card_cycle",
@@ -2167,7 +2250,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_set",
@@ -2189,7 +2273,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/card_set",
@@ -2211,7 +2296,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/card_type",
@@ -2233,7 +2319,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/card_type",
@@ -2255,7 +2342,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/faction",
@@ -2277,7 +2365,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/faction",
@@ -2299,7 +2388,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/illustrators",
@@ -2321,7 +2411,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/illustrators",
@@ -2343,7 +2434,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/relationships/side",
@@ -2365,7 +2457,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}/side",
@@ -2387,7 +2480,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings",
@@ -2409,7 +2503,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/printings/{printing_id}",
@@ -2431,7 +2526,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/restrictions",
@@ -2453,7 +2549,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/restrictions/{restriction_id}",
@@ -2475,7 +2572,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/rulings/{ruling_id}/relationships/card",
@@ -2497,7 +2595,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/rulings/{ruling_id}/card",
@@ -2519,7 +2618,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/rulings",
@@ -2541,7 +2641,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/relationships/factions",
@@ -2563,7 +2664,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/factions",
@@ -2585,7 +2687,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/relationships/card_types",
@@ -2607,7 +2710,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/card_types",
@@ -2629,7 +2733,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/relationships/cards",
@@ -2651,7 +2756,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/cards",
@@ -2673,7 +2779,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/relationships/printings",
@@ -2695,7 +2802,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}/printings",
@@ -2717,7 +2825,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides",
@@ -2739,7 +2848,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/sides/{side_id}",
@@ -2761,7 +2871,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/format",
@@ -2783,7 +2894,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/format",
@@ -2805,7 +2917,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_pool",
@@ -2827,7 +2940,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_pool",
@@ -2849,7 +2963,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/restriction",
@@ -2871,7 +2986,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/restriction",
@@ -2893,7 +3009,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_cycles",
@@ -2915,7 +3032,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_cycles",
@@ -2937,7 +3055,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/card_sets",
@@ -2959,7 +3078,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/card_sets",
@@ -2981,7 +3101,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/relationships/cards",
@@ -3003,7 +3124,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}/cards",
@@ -3025,7 +3147,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots",
@@ -3047,7 +3170,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/snapshots/{snapshot_id}",
@@ -3069,7 +3193,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     },
     {
       "endpoint": "/api/v3/public/validate_deck",
@@ -3091,7 +3216,8 @@
         "X-Forwarded-For",
         "X-Forwarded-Host",
         "X-Forwarded-Proto"
-      ]
+      ],
+      "cache_ttl": "1h"
     }
   ]
 }
