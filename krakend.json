@@ -344,6 +344,37 @@
       }
     },
     {
+      "endpoint": "/api/v3/private/user/{id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/private/user/{id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization",
+        "Content-Length",
+        "Content-Type",
+        "X-Forwarded-For",
+        "X-Forwarded-Host",
+        "X-Forwarded-Proto"
+      ],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "RS256",
+          "jwk_url": "http://keycloak:8080/realms/nullsignal/protocol/openid-connect/certs",
+          "disable_jwk_security": true
+        }
+      }
+    },
+    {
       "endpoint": "/api/v3/public/card_cycles/{card_cycle_id}/relationships/card_sets",
       "method": "GET",
       "backend": [
@@ -1828,6 +1859,56 @@
             "http://nrdb_api_server:3000"
           ],
           "url_pattern": "/api/v3/public/cards/{card_id}"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization",
+        "Content-Length",
+        "Content-Type",
+        "X-Forwarded-For",
+        "X-Forwarded-Host",
+        "X-Forwarded-Proto"
+      ],
+      "cache_ttl": "1h"
+    },
+    {
+      "endpoint": "/api/v3/public/decklists",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/decklists"
+        }
+      ],
+      "input_query_strings": [
+        "*"
+      ],
+      "input_headers": [
+        "Authorization",
+        "Content-Length",
+        "Content-Type",
+        "X-Forwarded-For",
+        "X-Forwarded-Host",
+        "X-Forwarded-Proto"
+      ],
+      "cache_ttl": "1h"
+    },
+    {
+      "endpoint": "/api/v3/public/decklists/{decklist_id}",
+      "method": "GET",
+      "backend": [
+        {
+          "method": "GET",
+          "host": [
+            "http://nrdb_api_server:3000"
+          ],
+          "url_pattern": "/api/v3/public/decklists/{decklist_id}"
         }
       ],
       "input_query_strings": [
