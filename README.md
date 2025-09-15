@@ -1,4 +1,7 @@
+# Note: This was abandoned in favor of alternatives given krakend limitations.
+
 # krakend_api_gateway
+
 Krakend API Gateway config for the v3 API Server. 
 
 ## Updating the Config
